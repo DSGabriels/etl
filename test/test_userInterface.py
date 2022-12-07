@@ -18,8 +18,8 @@ class TestGeral(unittest.TestCase):
             user_input2 = user.register_new_customer()
 
 
-            self.assertEquals(user_input, "Client cadastrado com sucesso!")
-            self.assertEquals(user_input2, "Cliente já existe")
+            self.assertEqual(user_input, "Client cadastrado com sucesso!")
+            self.assertEqual(user_input2, "Cliente já existe")
 
     def test_validate_sell(self):
         customer_repository = CustomerRepository()
