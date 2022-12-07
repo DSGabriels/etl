@@ -18,8 +18,8 @@ class TestGeral(unittest.TestCase):
             user_input2 = user.register_new_customer()
 
 
-            self.assertEqual(user_input, "Client cadastrado com sucesso!")
-            self.assertEqual(user_input2, "Cliente já existe")
+            self.assertEquals(user_input, "Client cadastrado com sucesso!")
+            self.assertEquals(user_input2, "Cliente já existe")
 
     def test_validate_sell(self):
         customer_repository = CustomerRepository()
@@ -59,7 +59,6 @@ class TestGeral(unittest.TestCase):
 
 
 def test_selling(monkeypatch):
-    #   Me ajudaram nesse teste aqui, por isso quebrei o padrão do Unittest #
     customer_repository = CustomerRepository()
     book_repository = BookRepository()
     order_repository = OrderRepository()
@@ -81,5 +80,4 @@ def test_selling(monkeypatch):
 
     assert vendido == "Pedido cadastrado com sucesso!"
     assert nao_vendido == "Algo deu errado :/"
-    #   Me ajudaram nesse teste aqui, por isso quebrei o padrão do Unittest #
 
